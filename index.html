@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.header{
+    background-color: #60495A;
+    text-align: center;
+    padding: 20px;
+}
+/*navigation*/
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	setInterval( ChangeMessage, 500);
+});
+var y=0;
+function ChangeMessage(){
+    var x=["Tere","tulemast","kõige","paremale","kodulehele!"];
+    $('#m0').html(x[y]);
+    if(++y==x.length)y=0;
+}
+</script>
+</head>
+<body>
+    <div class='header'>
+        <h1>kvaliteet koduleht</h1>
+    </div>
+    <div class="topnav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Tulp 1</h2>        
+            <p id='m0'></p>
+	    </div>
+        <div class="column">
+            <h2>Tulp 2</h2>    
+		</div>
+        <div class="column">
+            <h2>Tulp 3</h2> 
+		</div>
+    </div>
+</body>
+</html>
