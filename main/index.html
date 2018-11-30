@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="disain.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	setInterval( ChangeMessage, 500);
+});
+var y=0;
+function ChangeMessage(){
+    var x=["Minu","nimi","on","Magnus","Karlson!"];
+    $('#m0').html(x[y]);
+    if(++y==x.length)y=0;
+}
+</script>
+</head>
+<body>
+    <div class='header'>
+        <h1>kvaliteet koduleht</h1>
+    </div>
+    <div class="topnav">
+        <a href="Merili.html">Merili</a>
+        <a href="Magnus.html">Magnus</a>
+        <a href="Rovin.html">Rovin</a>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Merili</h2> 
+            Merili sõbrad merilist: Merili on energiline ja ekstravertne.
+            </p>       
+	    </div>
+        <div class="column">
+            <h2>Magnus</h2>    
+            <span id='m0'></span><br>
+            19-aastane noormees, informaatika erialal.<br>
+            Huvideks on tennis ja progre.
+		</div>
+        <div class="column">
+            <h2>Rovin</h2> 
+			<p>Tere tulemast veebilehe 3. tulpa!</p>
+			<p>Minu nimi on Rovin Raie. Olen parasjagu 20-aastane noormees, kes õpib Tartu Ülikoolis Informaatika alal. Varem olen tegelenud
+			võistlustantsu, poksi ja fitness'iga. Hetkel loon elektroonilist rokk-muusikat ja mixin ise vokaale.</p>
+		</div>
+    </div>
+</body>
+</html>
